@@ -26,6 +26,11 @@ public class TestController {
         System.out.println("id:" + id);
         return testService.getById(id);
     }
+
+    /**
+     * 查询
+     * @return
+     */
     @RequestMapping(value = "/selectList",method = RequestMethod.GET)
     @ResponseBody
     public List<ProjectType> selectList(){
