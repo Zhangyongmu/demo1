@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo1.dao.TestDao">
+    <!-- 根据主键查询-->
+    <select id="getById" resultType="com.example.demo1.entity.ProjectType" parameterType="java.lang.String" >
+        select  *
+        from project_type
+        where id = #{id,jdbcType=CHAR}
+    </select>
+    <select id="getByDr" resultType="com.example.demo1.entity.ProjectType" parameterType="java.lang.Integer" >
+        select  *
+        from project_type
+        where dr = #{dr}
+    </select>
+    <!-- 查询全部-->
+     <select id="selectList" resultType="com.example.demo1.entity.ProjectType" >
+        select * from project_type
+    </select>
+</mapper>
