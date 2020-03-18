@@ -16,10 +16,6 @@ public class TestController {
     @Autowired
     private TestService testService;
 
-    @RequestMapping("/hello")
-    public String hello() {
-        return "hello SpringBoot";
-    }
     @RequestMapping(value = "/get/{id}",method = RequestMethod.GET)
     @ResponseBody
     public ProjectType test(@PathVariable("id") String id){
